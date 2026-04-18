@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5" />
+  <meta name="theme-color" content="#3D1660" />
+  <meta name="description" content="Viridis — résidence d'habitat collectif engagée, écologique et innovante, imaginée pour les 60 ans de Grand Delta Habitat. Une maquette grandeur nature construite en LEGO." />
+  <meta property="og:title" content="Viridis · 60 ans de Grand Delta Habitat" />
+  <meta property="og:description" content="Du latin : vert & flamboyant. L'habitat de demain, construit aujourd'hui. En LEGO." />
+  <meta property="og:type" content="website" />
+  <title>Viridis · Grand Delta Habitat 60 ans</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,300;1,400;1,600&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/sections.css" />
+
+  <!-- Favicon SVG inline (brique LEGO violette) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect x='6' y='18' width='52' height='36' rx='2' fill='%236B2D9F'/%3E%3Ccircle cx='18' cy='14' r='7' fill='%236B2D9F'/%3E%3Ccircle cx='32' cy='14' r='7' fill='%236B2D9F'/%3E%3Ccircle cx='46' cy='14' r='7' fill='%236B2D9F'/%3E%3Ccircle cx='18' cy='14' r='4' fill='%239B59D0'/%3E%3Ccircle cx='32' cy='14' r='4' fill='%239B59D0'/%3E%3Ccircle cx='46' cy='14' r='4' fill='%239B59D0'/%3E%3C/svg%3E" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       PRELOADER
+       ═══════════════════════════════════════════════════════════ -->
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <div class="preloader-inner">
+      <div class="preloader-brick">
+        <span></span><span></span><span></span><span></span>
+      </div>
+      <div class="preloader-text">
+        <span data-text="V">V</span>
+        <span data-text="I">I</span>
+        <span data-text="R">R</span>
+        <span data-text="I">I</span>
+        <span data-text="D">D</span>
+        <span data-text="I">I</span>
+        <span data-text="S">S</span>
+      </div>
+      <div class="preloader-bar"><div class="preloader-bar-fill"></div></div>
+      <p class="preloader-caption">Assemblage des briques…</p>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       NAVBAR
+       ═══════════════════════════════════════════════════════════ -->
+  <nav class="navbar" id="navbar">
+    <a href="#hero" class="nav-logo" aria-label="Viridis - accueil">
+      <span class="nav-logo-brick" aria-hidden="true">
+        <i></i><i></i><i></i><i></i>
+      </span>
+      <span class="nav-logo-text">VIRIDIS</span>
+    </a>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#trailer">Bande-annonce</a></li>
+      <li><a href="#manifeste">Le Projet</a></li>
+      <li><a href="#lego">La Maquette</a></li>
+      <li><a href="#3d">Visite 3D</a></li>
+      <li><a href="#adn">L'ADN</a></li>
+      <li><a href="#galerie">Galerie</a></li>
+      <li><a href="#gdh">GDH · 60 ans</a></li>
+    </ul>
+
+    <button class="nav-burger" id="navBurger" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       SECTION 1 — HERO
+       ═══════════════════════════════════════════════════════════ -->
+  <section class="hero" id="hero">
+    <canvas id="heroCanvas" class="hero-canvas"></canvas>
+
+    <!-- Pattern de studs en fond -->
+    <div class="hero-studs" aria-hidden="true"></div>
+
+    <!-- Lignes décoratives -->
+    <div class="hero-grid" aria-hidden="true"></div>
+
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="hero-badge-dot"></span>
+        <span class="hero-badge-text">GDH · 60 ANS</span>
+        <span class="hero-badge-dot"></span>
+      </div>
+
+      <h1 class="hero-title" aria-label="Viridis">
+        <span class="hero-letter" data-letter="V">V</span><span class="hero-letter" data-letter="I">I</span><span class="hero-letter" data-letter="R">R</span><span class="hero-letter" data-letter="I">I</span><span class="hero-letter" data-letter="D">D</span><span class="hero-letter" data-letter="I">I</span><span class="hero-letter" data-letter="S">S</span>
+      </h1>
+
+      <p class="hero-subtitle"><em>Du latin</em> · Vert &amp; Flamboyant</p>
+
+      <p class="hero-paragraph">
+        Une résidence d'habitat collectif engagée, écologique et innovante —
+        imaginée pour les 60 ans de Grand Delta Habitat.
+      </p>
+
+      <div class="hero-ctas">
+        <a href="#trailer" class="cta cta-brick cta-primary">
+          <span class="cta-inner">
+            <span class="cta-play" aria-hidden="true"></span>
+            Voir la bande-annonce
+          </span>
+        </a>
+        <a href="#manifeste" class="cta cta-outline">
+          Explorer le projet
+          <span class="cta-arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+
+      <!-- Stats inline -->
+      <div class="hero-meta">
+        <div><strong>1 vision</strong><span>construire demain ensemble</span></div>
+        <span class="hero-meta-sep" aria-hidden="true"></span>
+        <div><strong>4 façades</strong><span>une résidence en briques</span></div>
+        <span class="hero-meta-sep" aria-hidden="true"></span>
+        <div><strong>60 ans</strong><span>Grand Delta Habitat</span></div>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <a href="#trailer" class="scroll-indicator" aria-label="Descendre">
+      <span class="scroll-brick" aria-hidden="true">
+        <i></i><i></i>
+      </span>
+      <span class="scroll-label">scroll</span>
+    </a>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       SECTION 2 — BANDE-ANNONCE
+       ═══════════════════════════════════════════════════════════ -->
+  <section class="trailer" id="trailer">
+    <div class="trailer-grain" aria-hidden="true"></div>
+
+    <div class="trailer-header">
+      <p class="eyebrow">Chapitre 01 · Teaser</p>
+      <h2 class="trailer-title glitch" data-text="Le thriller de l'habitat de demain">
+        Le thriller de<br/>l'habitat de <em>demain</em>
+      </h2>
+    </div>
+
+    <div class="trailer-stage">
+      <!-- Rideau de briques LEGO qui s'ouvre -->
+      <div class="curtain curtain-left" aria-hidden="true"></div>
+      <div class="curtain curtain-right" aria-hidden="true"></div>
+
+      <div class="trailer-frame">
+        <!-- Cadre en briques LEGO CSS -->
+        <span class="frame-corner frame-tl"></span>
+        <span class="frame-corner frame-tr"></span>
+        <span class="frame-corner frame-bl"></span>
+        <span class="frame-corner frame-br"></span>
+
+        <div class="trailer-video">
+          <!-- 🎬 VIDEO ID : rPAeK45YNVI (fourni par l'utilisateur) -->
+          <iframe
+            src="https://www.youtube.com/embed/rPAeK45YNVI?rel=0&showinfo=0&color=white&modestbranding=1"
+            title="Viridis · Bande-annonce"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            loading="lazy"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+
+    <blockquote class="trailer-quote">
+      <span class="quote-mark" aria-hidden="true">“</span>
+      Construire demain ensemble
+      <cite>— Grand Delta Habitat</cite>
+    </blockquote>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       SECTION 3 — QUI EST VIRIDIS ? (sticky scroll)
+       ═══════════════════════════════════════════════════════════ -->
+  <section class="manifeste" id="manifeste">
+    <div class="manifeste-inner">
+      <!-- Colonne gauche : texte défilant -->
+      <div class="manifeste-text">
+        <p class="eyebrow">Chapitre 02 · Manifeste</p>
+        <h2 class="manifeste-h2">Qui est <span class="grad-text">Viridis</span> ?</h2>
+
+        <div class="manifest-blocks">
+          <p class="mb mb-1 mb-intro">
+            <span class="mb-marker">01</span>
+            Je suis Viridis. Ma conception d'habitat collectif affiche une <strong>vision engagée</strong>, conciliant innovation, écologie et qualité de vie, dans la continuité des nouveaux projets d'avenir de Grand Delta Habitat et de ses ambitions, <em>« construire demain ensemble »</em>.
+          </p>
+
+          <p class="mb mb-2">
+            <span class="mb-marker">02</span>
+            Mon style affirmé prolonge <strong>la nature jusque dans l'architecture</strong>, apportant ainsi un écrin de verdure au cœur de l'environnement urbain. Imaginée et réalisée par l'<strong>agence du Pontet</strong>, j'espère vous séduire grâce à ma conception unique, et inspirer la réalisation de vos futurs projets.
+          </p>
+
+          <p class="mb mb-3">
+            <span class="mb-marker">03</span>
+            Mon architecture contemporaine agrémentée de <strong>terrasses, puits de lumière, toits plats asymétriques</strong>, permet de capter la luminosité naturelle pour la rediriger dans les logements et s'intègre harmonieusement à une végétation luxuriante.
+          </p>
+
+          <p class="mb mb-4">
+            <span class="mb-marker">04</span>
+            Mes espaces extérieurs, conçus autour de massifs durables, matériaux naturels, bordures en bois, paillage organique, écorces de pin, mobilier paramétrique, <strong>inspirent la nature</strong> et créent un environnement qui invite à la détente et à la flânerie.
+          </p>
+
+          <p class="mb mb-5">
+            <span class="mb-marker">05</span>
+            Mon <strong>jardin partagé</strong> reflète l'authenticité, la solidarité, et favorise les projets collectifs et ludiques.
+          </p>
+
+          <p class="mb mb-6">
+            <span class="mb-marker">06</span>
+            Ma <strong>démarche écologique</strong> présente des avantages écosystémiques qui répondent à la réglementation environnementale et permet d'associer de nombreux aspects de l'écoquartier.
+          </p>
+
+          <p class="mb mb-7">
+            <span class="mb-marker">07</span>
+            J'ai établi des partenariats pour l'installation d'une <strong>station vélo</strong> ainsi que des <strong>bornes de recharge pour véhicules électriques</strong>, afin de répondre aux défis de la loi mobilités.
+          </p>
+
+          <p class="mb mb-8">
+            <span class="mb-marker">08</span>
+            Optimisation des charges d'entretien, <strong>réduction des îlots de chaleur</strong>, solution de gestion des eaux pluviales, meilleure filtration de l'air, préservation des ressources, amélioration du rendement des panneaux solaires…
+          </p>
+
+          <p class="mb mb-outro">
+            <span class="mb-marker">✦</span>
+            <em>Je suis Viridis, et j'incarne la nature intégrée à l'habitat,<br/>à l'occasion des 60 ans de Grand Delta Habitat.</em>
+          </p>
+        </div>
+      </div>
+
+      <!-- Colonne droite sticky : visuel + hotspots -->
+      <div class="manifeste-visual">
+        <div class="manifeste-visual-inner">
+          <div class="manif-frame">
+            <!-- Image principale (placeholder stylisé) -->
+            <div class="manif-photo">
+              <!-- 📸 REMPLACER: /assets/images/facade-sud.jpg -->
+              <img src="assets/images/facade-sud.jpg" alt="Résidence Viridis — façade principale" loading="lazy" onerror="this.style.display='none';this.parentElement.classList.add('photo-missing');this.parentElement.dataset.label='FAÇADE PRINCIPALE';" />
+            </div>
+
+            <!-- Hotspots -->
+            <button class="hotspot hs-1" data-mb="1" style="top:18%;left:72%" aria-label="Vision engagée">
+              <span class="hs-pulse"></span>
+              <span class="hs-label">Vision engagée</span>
+            </button>
+            <button class="hotspot hs-2" data-mb="3" style="top:32%;left:24%" aria-label="Toits asymétriques">
+              <span class="hs-pulse"></span>
+              <span class="hs-label">Toits asymétriques</span>
+            </button>
+            <button class="hotspot hs-3" data-mb="4" style="top:62%;left:78%" aria-label="Végétation luxuriante">
+              <span class="hs-pulse"></span>
+              <span class="hs-label">Végétation</span>
+            </button>
+            <button class="hotspot hs-4" data-mb="7" style="top:78%;left:30%" aria-label="Mobilité douce">
+              <span class="hs-pulse"></span>
+              <span class="hs-label">Mobilité douce</span>
+            </button>
+            <button class="hotspot hs-5" data-mb="8" style="top:10%;left:40%" aria-label="Panneaux solaires">
+              <span class="hs-pulse"></span>
+              <span class="hs-label">Énergie</span>
+            </button>
+          </div>
+
+          <!-- Caption bas -->
+          <div class="manif-caption">
+            <span class="manif-caption-line"></span>
+            <em>Agence du Pontet · Grand Delta Habitat</em>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       SECTION 4 — LA RÉSIDENCE EN LEGO
+       ═══════════════════════════════════════════════════════════ -->
+  <section class="lego" id="lego">
+    <div class="lego-studs-bg" aria-hidden="true"></div>
+
+    <header class="lego-header">
+      <p class="eyebrow eyebrow-dark">Chapitre 03 · Maquette grandeur nature</p>
+      <h2 class="lego-h2">
+        CONSTRUIRE DEMAIN…<br/>
+        EN <span class="lego-yellow">LEGO</span>
+      </h2>
+      <p class="lego-intro">
+        Pour célébrer 60 ans d'innovation et d'audace, Grand Delta Habitat a relevé un défi unique :
+        construire une <strong>maquette grandeur nature</strong> de Viridis, entièrement en LEGO.
+        Des milliers de briques, une vision, un habitat du futur.
+      </p>
+    </header>
+
+    <!-- Carrousel 3D des 4 façades -->
+    <div class="facade-carousel" id="facadeCarousel">
+      <div class="facade-stage">
+        <div class="facade-card active" data-facade="sud">
+          <div class="facade-card-inner">
+            <div class="facade-front">
+              <!-- 📸 REMPLACER: /assets/images/facade-sud.jpg -->
+              <img src="assets/images/facade-sud.jpg" alt="Façade Sud" loading="lazy" onerror="this.style.display='none';this.parentElement.classList.add('photo-missing');this.parentElement.dataset.label='PHOTO FAÇADE SUD';" />
+              <div class="facade-label"><span>SUD</span></div>
+            </div>
+            <div class="facade-back">
+              <h3>Façade Sud</h3>
+              <p>L'entrée principale, baignée de lumière. Toiture-jardin généreuse, fenêtres grand format et signalétique Viridis · 60 ans.</p>
+              <ul>
+                <li>Toit-jardin en briques vertes</li>
+                <li>Façade multi-tons chauds</li>
+                <li>Végétation ornementale en plots</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="facade-card" data-facade="nord">
+          <div class="facade-card-inner">
+            <div class="facade-front">
+              <!-- 📸 REMPLACER: /assets/images/facade-nord.jpg -->
+              <img src="assets/images/facade-nord.jpg" alt="Façade Nord" loading="lazy" onerror="this.style.display='none';this.parentElement.classList.add('photo-missing');this.parentElement.dataset.label='PHOTO FAÇADE NORD';" />
+              <div class="facade-label"><span>NORD</span></div>
+            </div>
+            <div class="facade-back">
+              <h3>Façade Nord</h3>
+              <p>Toitures asymétriques roses, bleues et violettes ; captation solaire optimisée et modulation des volumes pour briser les îlots de chaleur.</p>
+              <ul>
+                <li>Toits plats asymétriques</li>
+                <li>Puits de lumière intégrés</li>
+                <li>Accès jardin partagé</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="facade-card" data-facade="est">
+          <div class="facade-card-inner">
+            <div class="facade-front">
+              <!-- 📸 REMPLACER: /assets/images/facade-est.jpg -->
+              <img src="assets/images/facade-est.jpg" alt="Façade Est" loading="lazy" onerror="this.style.display='none';this.parentElement.classList.add('photo-missing');this.parentElement.dataset.label='PHOTO FAÇADE EST';" />
+              <div class="facade-label"><span>EST</span></div>
+            </div>
+            <div class="facade-back">
+              <h3>Façade Est</h3>
+              <p>Station vélo et bornes de recharge pour véhicules électriques : la mobilité douce au quotidien, répondant à la loi mobilités.</p>
+              <ul>
+                <li>Station vélo sécurisée</li>
+                <li>Bornes IRVE</li>
+                <li>Signalétique cyclable</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="facade-card" data-facade="ouest">
+          <div class="facade-card-inner">
+            <div class="facade-front">
+              <!-- 📸 REMPLACER: /assets/images/facade-ouest.jpg -->
+              <img src="assets/images/facade-ouest.jpg" alt="Façade Ouest" loading="lazy" onerror="this.style.display='none';this.parentElement.classList.add('photo-missing');this.parentElement.dataset.label='PHOTO FAÇADE OUEST';" />
+              <div class="facade-label"><span>OUEST</span></div>
+            </div>
+            <div class="facade-back">
+              <h3>Façade Ouest</h3>
+              <p>Stationnement numéroté, agence du Pontet, jardin partagé et terrain de pétanque — un vrai quartier miniature.</p>
+              <ul>
+                <li>Parking résidents</li>
+                <li>Jardin partagé</li>
+                <li>Espaces de convivialité</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Nav carrousel -->
+      <div class="facade-nav">
+        <button class="facade-nav-btn prev" aria-label="Façade précédente">
+          <span></span>
+        </button>
+        <div class="facade-nav-dots">
+          <button class="dot active" data-index="0"><span>S</span></button>
+          <button class="dot" data-index="1"><span>N</span></button>
+          <button class="dot" data-index="2"><span>E</span></button>
+          <button class="dot" data-index="3"><span>O</span></button>
+        </div>
+        <button class="facade-nav-btn next" aria-label="Façade suivante">
+          <span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Compteurs animés -->
+    <div class="lego-counters">
+      <div class="counter">
+        <div class="counter-num" data-target="4">0</div>
+        <div class="counter-label">Façades</div>
+      </div>
+      <span class="counter-sep" aria-hidden="true">·</span>
+      <div class="counter">
+        <div class="counter-num" data-target="2500" data-suffix="+">0</div>
+        <div class="counter-label">Briques</div>
+      </div>
+      <span class="counter-sep" aria-hidden="true">·</span>
+      <div class="counter">
+        <div class="counter-num" data-target="1">0</div>
+        <div class="counter-label">Vision</div>
+      </div>
+      <span class="counter-sep" aria-hidden="true">·</span>
+      <div class="counter">
+        <div class="counter-num" data-target="60" data-suffix=" ans">0</div>
+        <div class="counter-label">GDH</div>
+      </div>
+    </div>
+
+    <!-- Masonry additionnelle -->
+    <div class="lego-masonry">
+      <figure class="lg-card lg-card-tall">
+        <!-- 📸 REMPLACER: /assets/images/photo-lego-1.jpg -->
+        <img src="assets/images/photo-lego-1.jpg" alt="Maquette vue d'ensemble" loading="lazy" onerror="this.style.display='none';this.parentElement.classList.add('photo-missing');this.parentElement.dataset.label='VUE D\\'ENSEMBLE';" />
+        <figcaption>Vue d'ensemble · la résidence et ses abords</figcaption>
+      </figure>
+      <figure class="lg-card">
+        <!-- 📸 REMPLACER: /assets/images/photo-lego-2.jpg -->
+        <img src="assets/images/photo-lego-2.jpg" alt="Toits asymétriques" loading="lazy" onerror="this.style.display='none';this.parentElement.classList.add('photo-missing');this.parentElement.dataset.label='LES TOITS';" />
+        <figcaption>Toits plats asymétriques · captation de lumière</figcaption>
+      </figure>
+      <figure class="lg-card">
+        <!-- 📸 REMPLACER: /assets/images/photo-lego-3.jpg -->
+        <img src="assets/images/photo-lego-3.jpg" alt="Station vélo et bornes" loading="lazy" onerror="this.style.display='none';this.parentElement.classList.add('photo-missing');this.parentElement.dataset.label='MOBILITÉS DOUCES';" />
+        <figcaption>Station vélo · bornes de recharge</figcaption>
+      </figure>
+      <figure class="lg-card lg-card-wide">
+        <!-- 📸 REMPLACER: /assets/images/photo-lego-4.jpg -->
+        <img src="assets/images/photo-lego-4.jpg" alt="Jardin partagé" loading="lazy" onerror="this.style.display='none';this.parentElement.classList.add('photo-missing');this.parentElement.dataset.label='JARDIN PARTAGÉ';" />
+        <figcaption>Jardin partagé · solidarité et biodiversité</figcaption>
+      </figure>
+      <figure class="lg-card">
+        <!-- 📸 REMPLACER: /assets/images/photo-lego-5.jpg -->
+        <img src="assets/images/photo-lego-5.jpg" alt="Parking résidents" loading="lazy" onerror="this.style.display='none';this.parentElement.classList.add('photo-missing');this.parentElement.dataset.label='PARKING 1 2 3';" />
+        <figcaption>Stationnement résidents · agence du Pontet</figcaption>
+      </figure>
+      <figure class="lg-card">
+        <!-- 📸 REMPLACER: /assets/images/photo-lego-6.jpg -->
+        <img src="assets/images/photo-lego-6.jpg" alt="Le Grand Chantier" loading="lazy" onerror="this.style.display='none';this.parentElement.classList.add('photo-missing');this.parentElement.dataset.label='LE GRAND CHANTIER';" />
+        <figcaption>Le Grand Chantier des 60 ans</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       SECTION 5 — VISITE 3D DES FAÇADES
+       ═══════════════════════════════════════════════════════════ -->
+  <section class="tour3d" id="3d">
+    <div class="tour3d-bg" aria-hidden="true"></div>
+
+    <header class="tour3d-header">
+      <p class="eyebrow">Chapitre 04 · Visite immersive</p>
+      <h2 class="tour3d-h2">VIRIDIS<br/><span class="grad-text">sous tous ses angles</span></h2>
+      <p class="tour3d-sub">Faites pivoter la maquette avec votre souris. Cliquez sur les sphères lumineuses pour découvrir les caractéristiques architecturales.</p>
+    </header>
+
+    <div class="tour3d-stage">
+      <canvas id="tour3dCanvas" class="tour3d-canvas"></canvas>
+
+      <!-- Tooltip -->
+      <div class="tour3d-tooltip" id="tour3dTooltip">
+        <h4 id="tour3dTooltipTitle">—</h4>
+        <p id="tour3dTooltipText">—</p>
+      </div>
+
+      <!-- Boutons orientation -->
+      <div class="tour3d-controls">
+        <button class="t3d-btn" data-orient="nord">Nord</button>
+        <button class="t3d-btn" data-orient="sud">Sud</button>
+        <button class="t3d-btn" data-orient="est">Est</button>
+        <button class="t3d-btn" data-orient="ouest">Ouest</button>
+        <button class="t3d-btn t3d-btn-reset" data-orient="reset" aria-label="Réinitialiser la vue">↻</button>
+      </div>
+
+      <p class="tour3d-hint">
+        <span>⟳</span> Cliquer-glisser pour pivoter · molette pour zoomer
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       SECTION 6 — L'ADN DE VIRIDIS (6 vertus)
+       ═══════════════════════════════════════════════════════════ -->
+  <section class="adn" id="adn">
+    <header class="adn-header">
+      <p class="eyebrow eyebrow-dark">Chapitre 05 · Vertus</p>
+      <h2 class="adn-h2">L'ADN DE <span class="grad-text-dark">VIRIDIS</span></h2>
+      <p class="adn-sub">Six piliers, six promesses. Chaque brique compte.</p>
+    </header>
+
+    <div class="adn-grid">
+      <article class="adn-card" style="--c:var(--green-viridis);--c-dark:var(--green-dark)">
+        <div class="adn-card-studs" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+        <div class="adn-card-body">
+          <div class="adn-icon">🌱</div>
+          <h3>ÉCOLOGIE</h3>
+          <p>Biodiversité, réduction des îlots de chaleur, meilleure filtration de l'air.</p>
+          <span class="adn-num">01</span>
+        </div>
+      </article>
+
+      <article class="adn-card" style="--c:var(--gold-60);--c-dark:#8a6f1f">
+        <div class="adn-card-studs" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+        <div class="adn-card-body">
+          <div class="adn-icon">☀️</div>
+          <h3>LUMINOSITÉ</h3>
+          <p>Toits asymétriques, puits de lumière, captation solaire naturelle.</p>
+          <span class="adn-num">02</span>
+        </div>
+      </article>
+
+      <article class="adn-card" style="--c:var(--violet-light);--c-dark:var(--violet-deep)">
+        <div class="adn-card-studs" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+        <div class="adn-card-body">
+          <div class="adn-icon">🚲</div>
+          <h3>MOBILITÉ</h3>
+          <p>Station vélo, bornes de recharge électrique, loi mobilités respectée.</p>
+          <span class="adn-num">03</span>
+        </div>
+      </article>
+
+      <article class="adn-card" style="--c:#4FB8FF;--c-dark:#1E6DAA">
+        <div class="adn-card-studs" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+        <div class="adn-card-body">
+          <div class="adn-icon">💧</div>
+          <h3>EAU</h3>
+          <p>Gestion innovante des eaux pluviales, préservation des ressources.</p>
+          <span class="adn-num">04</span>
+        </div>
+      </article>
+
+      <article class="adn-card" style="--c:#FF7BAE;--c-dark:#B83F74">
+        <div class="adn-card-studs" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+        <div class="adn-card-body">
+          <div class="adn-icon">🤝</div>
+          <h3>COLLECTIF</h3>
+          <p>Jardin partagé, solidarité, projets collectifs et ludiques.</p>
+          <span class="adn-num">05</span>
+        </div>
+      </article>
+
+      <article class="adn-card" style="--c:var(--violet-main);--c-dark:var(--violet-deep)">
+        <div class="adn-card-studs" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+        <div class="adn-card-body">
+          <div class="adn-icon">⚡</div>
+          <h3>ÉNERGIE</h3>
+          <p>Rendement optimisé des panneaux solaires, charges d'entretien réduites.</p>
+          <span class="adn-num">06</span>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       SECTION 7 — GALERIE
+       ═══════════════════════════════════════════════════════════ -->
+  <section class="galerie" id="galerie">
+    <header class="galerie-header">
+      <p class="eyebrow">Chapitre 06 · Images</p>
+      <h2 class="galerie-h2">VIRIDIS<br/><em>en images</em></h2>
+
+      <div class="galerie-filters" role="tablist">
+        <button class="gf-btn active" data-filter="all">Tout</button>
+        <button class="gf-btn" data-filter="lego">Maquette LEGO</button>
+        <button class="gf-btn" data-filter="archi">Architecture</button>
+        <button class="gf-btn" data-filter="vert">Espaces verts</button>
+        <button class="gf-btn" data-filter="detail">Détails</button>
+      </div>
+    </header>
+
+    <div class="galerie-grid" id="galerieGrid">
+      <figure class="gal-item gal-large" data-cat="lego archi">
+        <img src="assets/images/facade-sud.jpg" alt="Viridis · façade principale" loading="lazy" onerror="this.style.display='none';this.parentElement.classList.add('photo-missing');this.parentElement.dataset.label='FAÇADE PRINCIPALE';" />
+        <figcaption><span>Façade principale</span><em>Architecture · LEGO</em></figcaption>
+      </figure>
+      <figure class="gal-item" data-cat="lego archi">
+        <img src="assets/images/facade-nord.jpg" alt="Toits asymétriques" loading="lazy" onerror="this.style.display='none';this.parentElement.classList.add('photo-missing');this.parentElement.dataset.label='TOITS ASYMÉTRIQUES';" />
+        <figcaption><span>Toits asymétriques</span><em>Architecture</em></figcaption>
+      </figure>
+      <figure class="gal-item" data-cat="lego detail">
+        <img src="assets/images/facade-est.jpg" alt="Station vélo" loading="lazy" onerror="this.style.display='none';this.parentElement.classList.add('photo-missing');this.parentElement.dataset.label='MOBILITÉS';" />
+        <figcaption><span>Mobilités douces</span><em>Détails</em></figcaption>
+      </figure>
+      <figure class="gal-item gal-wide" data-cat="lego vert">
+        <img src="assets/images/photo-lego-4.jpg" alt="Jardin partagé" loading="lazy" onerror="this.style.display='none';this.parentElement.classList.add('photo-missing');this.parentElement.dataset.label='JARDIN PARTAGÉ';" />
+        <figcaption><span>Jardin partagé</span><em>Espaces verts</em></figcaption>
+      </figure>
+      <figure class="gal-item" data-cat="lego archi">
+        <img src="assets/images/facade-ouest.jpg" alt="Le Pontet · façade ouest" loading="lazy" onerror="this.style.display='none';this.parentElement.classList.add('photo-missing');this.parentElement.dataset.label='LE PONTET';" />
+        <figcaption><span>Agence du Pontet</span><em>Architecture</em></figcaption>
+      </figure>
+      <figure class="gal-item" data-cat="lego detail">
+        <img src="assets/images/photo-lego-5.jpg" alt="Parking numéroté" loading="lazy" onerror="this.style.display='none';this.parentElement.classList.add('photo-missing');this.parentElement.dataset.label='PARKING · 123';" />
+        <figcaption><span>Stationnement · 1 · 2 · 3</span><em>Détails</em></figcaption>
+      </figure>
+      <figure class="gal-item gal-tall" data-cat="lego vert">
+        <img src="assets/images/photo-lego-1.jpg" alt="Résidence d'ensemble" loading="lazy" onerror="this.style.display='none';this.parentElement.classList.add('photo-missing');this.parentElement.dataset.label='ENSEMBLE';" />
+        <figcaption><span>Vue d'ensemble</span><em>Maquette · Verdure</em></figcaption>
+      </figure>
+      <figure class="gal-item" data-cat="lego detail">
+        <img src="assets/images/photo-lego-6.jpg" alt="Grand chantier" loading="lazy" onerror="this.style.display='none';this.parentElement.classList.add('photo-missing');this.parentElement.dataset.label='LE GRAND CHANTIER';" />
+        <figcaption><span>Le Grand Chantier</span><em>60 ans</em></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lb-close" aria-label="Fermer">×</button>
+    <button class="lb-prev" aria-label="Précédente">‹</button>
+    <button class="lb-next" aria-label="Suivante">›</button>
+    <div class="lb-stage">
+      <img id="lbImg" src="" alt="" />
+      <div class="lb-caption" id="lbCaption"></div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       SECTION 8 — ÉTYMOLOGIE / MANIFESTE
+       ═══════════════════════════════════════════════════════════ -->
+  <section class="etymo" id="etymo">
+    <canvas id="particlesCanvas" class="etymo-particles"></canvas>
+
+    <div class="etymo-inner">
+      <p class="eyebrow eyebrow-light">Chapitre 07 · Étymologie</p>
+
+      <h2 class="etymo-word" aria-label="Viridis">
+        <span class="etymo-letter" style="--d:0">V</span>
+        <span class="etymo-letter" style="--d:1">I</span>
+        <span class="etymo-letter" style="--d:2">R</span>
+        <span class="etymo-letter" style="--d:3">I</span>
+        <span class="etymo-letter" style="--d:4">D</span>
+        <span class="etymo-letter" style="--d:5">I</span>
+        <span class="etymo-letter" style="--d:6">S</span>
+      </h2>
+
+      <blockquote class="etymo-quote">
+        <em>Du latin</em> · Vert &amp; Flamboyant
+      </blockquote>
+
+      <p class="etymo-text">
+        Utilisé comme épithète spécifique dans les noms scientifiques de nombreuses plantes et animaux,
+        <em>viridis</em> évoque <strong>la nature, la terre nourricière</strong>, et symbolise la
+        <strong>jeunesse et la créativité</strong>. À l'époque contemporaine, il trouve sa place dans
+        <strong>l'écologie, la durabilité et le design</strong>.
+      </p>
+
+      <div class="etymo-divider" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       SECTION 9 — GDH 60 ANS
+       ═══════════════════════════════════════════════════════════ -->
+  <section class="gdh" id="gdh">
+    <div class="gdh-header">
+      <div class="gdh-badge">
+        <span class="gdh-badge-ring"></span>
+        <span class="gdh-badge-inner">
+          <strong>60</strong>
+          <span>ans</span>
+        </span>
+      </div>
+      <h2 class="gdh-h2">GRAND DELTA HABITAT</h2>
+      <p class="gdh-tagline"><em>« Construire demain ensemble »</em></p>
+    </div>
+
+    <!-- Timeline horizontale -->
+    <div class="timeline" id="timeline">
+      <div class="timeline-track">
+        <div class="timeline-line"></div>
+
+        <article class="tl-step">
+          <span class="tl-dot"></span>
+          <div class="tl-content">
+            <time>1964</time>
+            <h4>Naissance</h4>
+            <p>Fondation de Grand Delta Habitat. Les premières briques sont posées.</p>
+          </div>
+        </article>
+
+        <article class="tl-step">
+          <span class="tl-dot"></span>
+          <div class="tl-content">
+            <time>1980s</time>
+            <h4>Expansion</h4>
+            <p>Déploiement sur l'ensemble de la région. L'habitat social se modernise.</p>
+          </div>
+        </article>
+
+        <article class="tl-step">
+          <span class="tl-dot"></span>
+          <div class="tl-content">
+            <time>2000s</time>
+            <h4>Engagement écologique</h4>
+            <p>Intégration de la démarche environnementale dans chaque projet neuf.</p>
+          </div>
+        </article>
+
+        <article class="tl-step">
+          <span class="tl-dot"></span>
+          <div class="tl-content">
+            <time>2020s</time>
+            <h4>Mobilités &amp; innovation</h4>
+            <p>Bornes IRVE, stations vélo, panneaux solaires : l'habitat répond à la loi mobilités.</p>
+          </div>
+        </article>
+
+        <article class="tl-step tl-highlight">
+          <span class="tl-dot"></span>
+          <div class="tl-content">
+            <time>2024</time>
+            <h4>Viridis · 60 ans</h4>
+            <p>Une maquette LEGO grandeur nature célèbre six décennies de construction collective.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <div class="gdh-ambition">
+      <p>
+        Depuis soixante ans, Grand Delta Habitat bâtit des lieux de vie où chacun trouve sa place.
+        <strong>Viridis</strong> est la preuve que l'habitat de demain s'imagine dès aujourd'hui — et
+        qu'il peut être <em>vert, flamboyant et collectif</em>.
+      </p>
+      <a href="https://www.gdh.fr" target="_blank" rel="noopener" class="cta cta-outline cta-dark">
+        Visiter le site GDH
+        <span class="cta-arrow" aria-hidden="true">→</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       FOOTER
+       ═══════════════════════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="footer-studs" aria-hidden="true"></div>
+
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="#hero" class="footer-logo">
+          <span class="footer-logo-brick">
+            <i></i><i></i><i></i><i></i>
+          </span>
+          <span>VIRIDIS</span>
+        </a>
+        <span class="footer-x" aria-hidden="true">×</span>
+        <div class="footer-gdh">
+          <strong>Grand Delta Habitat</strong>
+          <em>60 ans · 1964 — 2024</em>
+        </div>
+      </div>
+
+      <nav class="footer-nav" aria-label="Navigation pied de page">
+        <a href="#hero">Accueil</a>
+        <span aria-hidden="true">·</span>
+        <a href="#manifeste">Le Projet</a>
+        <span aria-hidden="true">·</span>
+        <a href="#trailer">La Vidéo</a>
+        <span aria-hidden="true">·</span>
+        <a href="#galerie">La Galerie</a>
+        <span aria-hidden="true">·</span>
+        <a href="https://www.gdh.fr" target="_blank" rel="noopener">Contact</a>
+      </nav>
+
+      <p class="footer-mention">
+        © 2024 Grand Delta Habitat · Résidence Viridis · <em>Agence du Pontet</em>
+      </p>
+
+      <p class="footer-secret">
+        <span>Assemblé avec</span> <span class="foot-brick" aria-hidden="true"><i></i><i></i></span> <span>à l'occasion des 60 ans</span>
+      </p>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       SCRIPTS (CDN)
+       ═══════════════════════════════════════════════════════════ -->
+
+  <!-- Filet de sécurité : cache le préloader dans tous les cas -->
+  <script>
+    (function () {
+      function hide () {
+        var p = document.getElementById('preloader');
+        if (p) p.classList.add('hidden');
+      }
+      // Au plus tard après 4 secondes, on cache de toute façon.
+      setTimeout(hide, 4000);
+      // En cas d'erreur JS globale, on cache immédiatement.
+      window.addEventListener('error', function (e) {
+        console.error('[Viridis] Erreur JS :', e.message, e.filename, e.lineno);
+        hide();
+      });
+      window.addEventListener('load', function () { setTimeout(hide, 300); });
+    })();
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+  <script src="js/particles.js"></script>
+  <script src="js/three-scene.js"></script>
+  <script src="js/gallery.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
